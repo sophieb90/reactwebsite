@@ -3,25 +3,26 @@ import '../styles/styles.css'
 import {NavLink} from 'react-router-dom'
 
 export function Header ( props ) {
-    return(
-    const Navigation = (props) => {
-        props.item.map((navObject,key) => {
-            if( navObject.link === '/' ){
-                return(
+    return function ( Navigation = (props) => {
+        props.item.map((navObject, key) => {
+            if (navObject.link === '/') {
+                return (
                     <NavLink key={key} exact to={navObject.link}>
                         {navObject.name}
                     </NavLink>
                 )
             }
             else {
-                return(
-                    <NavLink key = {key} to ={navObject.link}>
+                return (
+                    <NavLink key={key} to={navObject.link}>
                         {NavObject.name}
                     </NavLink>
                 )
             }
-        } )
-        )
+        })
+    }) {
+        return
+    }
     }
     return (
     <header className="main-header">
@@ -30,6 +31,6 @@ export function Header ( props ) {
         <Navigation items={ props.navigation } />
     </header>
     )
-}
+
 
 export default Header 
